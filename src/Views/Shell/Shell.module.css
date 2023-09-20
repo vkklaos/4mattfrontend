@@ -1,0 +1,6 @@
+.root, .header  {
+  background-color: var(--mantine-color-gray-0);
+}
+.navbar {
+  background-color: var(--mantine-color-gray-1);
+}

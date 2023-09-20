@@ -1,0 +1,30 @@
+.group {
+  border-bottom: 3px solid var(--mantine-color-gray-1);
+  width: 100%;
+}
+
+.button {
+  transition: color .6s ease, border .6s ease;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--mantine-color-gray-5);
+
+  &:hover {
+    color: var(--mantine-color-gray-7);
+    border-bottom: 3px solid var(--mantine-color-gray-5);
+  }
+
+  &[data-active] {
+    &,
+    &:hover {
+      color: var(--mantine-color-main-7);
+      border-bottom: 3px solid var(--mantine-color-main-6);
+    }
+  }
+}

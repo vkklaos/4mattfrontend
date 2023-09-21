@@ -1,8 +1,9 @@
+import { Flex } from '@mantine/core'
 import React from 'react'
 
 const HelloWorldPage = () => {
   return (
-    <div>Hello World!</div>
+    <Flex h={'70vh'} align={'center'} justify={'center'}>Hello World!</Flex>
   )
 }
 

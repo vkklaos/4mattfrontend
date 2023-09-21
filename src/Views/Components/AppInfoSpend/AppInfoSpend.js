@@ -18,7 +18,7 @@ const AppInfoSpend = () => {
     React.useEffect(() => {
         if (maxSpend) {
             if (maxSpend.application) {
-                const name = maxSpend.application.replace(/\W+/g, '').toLowerCase();
+                const name = maxSpend.application.replace(/\W+/g, '-').toLowerCase();
                 setImageName(name);
             }
         }

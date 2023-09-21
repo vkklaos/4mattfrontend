@@ -47,5 +47,5 @@
     "postcss-preset-mantine": "^1.7.0",
     "postcss-simple-vars": "^7.0.1"
   },
-  "homepage": "."
+  "homepage": "https://4mattfrontend.vercel.app/"
 }

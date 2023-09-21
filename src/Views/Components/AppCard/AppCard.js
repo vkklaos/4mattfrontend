@@ -5,8 +5,10 @@ import { Text } from '@mantine/core'
 const AppCard = ({ title, children }) => {
   return (
     <div className={classes.appCard}>
-      <Text>{title}</Text>
-      {children}
+      <Text className={classes.cardTitle}>{title}</Text>
+      <div className={classes.container}>
+        {children}
+      </div>
     </div>
   )
 }

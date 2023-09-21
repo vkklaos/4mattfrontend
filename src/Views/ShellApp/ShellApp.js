@@ -1,11 +1,12 @@
 import classes from './ShellApp.module.css';
 import React from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { useDisclosure } from '@mantine/hooks';
 import { AppShell, Burger, Flex, Group, Image } from '@mantine/core';
 import { Context } from '../../Context';
 import Logo from "../../Assets/Pngs/logo.png";
-import Dashboard from '../Components/Dashboard/Dashboard';
+import Dashboard from '../Dashboard/Dashboard';
+import HelloWorldPage from '../HelloWorldPage/HelloWorldPage'
 
 export function ShellApp() {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
@@ -14,18 +15,17 @@ export function ShellApp() {
   const { active, setActive, navigation } = React.useContext(Context);
 
   const links = navigation.map((item) => (
-    <a
+    <Link
       className={classes.headerButton}
-      data-active={item.label === active || undefined}
-      href={item.link}
+      data-active={item.link === active || undefined}
+      to={item.link}
       key={item.label}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(item.label);
+      onClick={() => {
+        setActive(item.link);
       }}
     >
       <span>{item.label}</span>
-    </a>
+    </Link>
   ));
 
   return (
@@ -47,8 +47,8 @@ export function ShellApp() {
       >
         <AppShell.Header withBorder={false}>
         <Group h="100%" px="md">
-          <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
           <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
+          <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
           <Group justify="start" style={{ flex: 1 }}>
             <Group ml="xl" gap={40} visibleFrom="sm" className={classes.headerGroup} >
               {links}
@@ -64,12 +64,16 @@ export function ShellApp() {
             direction="column"
             wrap="nowrap"
           >
+          <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
             <Image src={Logo} />
           </Flex>
         </AppShell.Navbar>
         <AppShell.Main>
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/spends" element={<HelloWorldPage />} />
+            <Route path="/transactions" element={<HelloWorldPage />} />
+            <Route path="/licenses" element={<HelloWorldPage />} />
           </Routes>
         </AppShell.Main>
       </AppShell>

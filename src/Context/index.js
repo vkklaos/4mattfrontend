@@ -6,10 +6,10 @@ export const Context = React.createContext({});
 export const Storage = ({ children }) => {
 
   const navigation = [
-    { link: '', label: 'Cost Optimization Dashboard'},
-    { link: '', label: 'Application Spend'},
-    { link: '', label: 'Transactions'},
-    { link: '', label: 'Licences'},
+    { link: '/', label: 'Cost Optimization Dashboard'},
+    { link: '/spends', label: 'Application Spend'},
+    { link: '/transactions', label: 'Transactions'},
+    { link: '/licenses', label: 'Licences'},
   ];
   const [items, setItems] = React.useState([]);
   const [active, setActive] = React.useState('Cost Optimization Dashboard');
@@ -20,11 +20,13 @@ export const Storage = ({ children }) => {
   const [categoryArray, setCategoryArray] = React.useState([]);
   const [increaseArray, setIncreaseArray] = React.useState([]);
   const [dateFilter, setDateFilter] = React.useState([null, null]);
+  const [categoryFilter, setCategoryFilter] = React.useState("All");
 
   const [minDate, setMinDate] = React.useState(null);
   const [maxDate, setMaxDate] = React.useState(null);
 
   const [maxSpend, setMaxSpend] = React.useState(null);
+
 
     React.useEffect(() => {
       let items = data.map((item) => {
@@ -43,22 +45,77 @@ export const Storage = ({ children }) => {
       });
       setMinDate(orderedDates[0].date);
       setMaxDate(orderedDates[orderedDates.length - 1].date);
+      setDateFilter([orderedDates[0].date, orderedDates[orderedDates.length - 1].date])
       setItems(items);
+      setActive(window.location.pathname);
     }, []);
 
     React.useEffect(() => {
       if (items.length !== 0) {
         if (dateFilter[0] !== null) {
           if (dateFilter[1] !== null) {
-            let resultProductData = items.filter(a => {
-              let date = new Date(a.date);
-              return (date >= dateFilter[0] && date <= dateFilter[1]);
-            });
-            setFilteredItems(resultProductData);
+            if (categoryFilter !== "All") {
+              let resultProductData = items.filter(a => {
+                let date = new Date(a.date);
+                return date >= dateFilter[0] && date <= dateFilter[1] && a.category === categoryFilter;
+              });
+              if (resultProductData.length !== 0) {
+                setFilteredItems(resultProductData);
+              } else {
+                setFilteredItems([]);
+              }
+            } else {
+              let resultProductData = items.filter(a => {
+                let date = new Date(a.date);
+                return (date >= dateFilter[0] && date <= dateFilter[1]);
+              });
+              if (resultProductData.length !== 0) {
+                setFilteredItems(resultProductData);
+              } else {
+                setFilteredItems([]);
+              }
+            }
           }
         }
       }
-    }, [items, dateFilter])
+    }, [items, dateFilter, categoryFilter])
+
+    React.useEffect(() => {
+      if (items.length !== 0) {
+        if (dateFilter[1] === null) {
+          let resultProductData = items.filter(a => {
+            return a.category === categoryFilter;
+          });
+          if (resultProductData.length !== 0) {
+            setFilteredItems(resultProductData);
+          } else {
+            setFilteredItems([]);
+          }
+        } else {
+          if (categoryFilter !== "All") {
+            let resultProductData = items.filter(a => {
+              let date = new Date(a.date);
+              return date >= dateFilter[0] && date <= dateFilter[1] && a.category === categoryFilter;
+            });
+            if (resultProductData.length !== 0) {
+              setFilteredItems(resultProductData);
+            } else {
+              setFilteredItems([]);
+            }
+          } else {
+            let resultProductData = items.filter(a => {
+              let date = new Date(a.date);
+              return date >= dateFilter[0] && date <= dateFilter[1];
+            });
+            if (resultProductData.length !== 0) {
+              setFilteredItems(resultProductData);
+            } else {
+              setFilteredItems([]);
+            }
+          }
+        }
+      }
+    }, [items, categoryFilter, dateFilter])
 
     React.useEffect(() => {
       if (filteredItems.length !== 0) {
@@ -76,9 +133,9 @@ export const Storage = ({ children }) => {
 
         if (otherSpends.length > 1) {
           const totalSpend = otherSpends.reduce((acc, item) => acc + item.spend, 0);
-          setMaxSpend(totalSpend);
+          setMaxSpend({application: appSpend.application, spend: totalSpend});
         } else {
-          setMaxSpend(maxSpend);
+          setMaxSpend({application: appSpend.application, spend: maxSpend});
         }
         // organizando apps por ordem de gasto
         const result = filteredItems.reduce((acc, obj) => {
@@ -125,6 +182,12 @@ export const Storage = ({ children }) => {
         }, []);
         const percentages = increases.filter((item) => item.increase !== undefined);
         setIncreaseArray(percentages);
+      } else {
+        setTotalTime(0);
+        setMaxSpend(null);
+        setSumFiltered([]);
+        setCategoryArray([]);
+        setIncreaseArray([]);
       }
     }, [filteredItems, dateFilter])
 
@@ -145,6 +208,9 @@ export const Storage = ({ children }) => {
             sumFiltered,
             categoryArray,
             increaseArray,
+            maxSpend,
+            categoryFilter,
+            setCategoryFilter
           }}
         >
           {children}

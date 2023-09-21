@@ -1,0 +1,346 @@
+[
+    {
+      "Date": "1/1/23",
+      "Category": "Produtividade",
+      "Application": "Microsoft office 365",
+      "Spend": "5689",
+      "Active Users": "100",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "1/15/23",
+      "Category": "Produtividade",
+      "Application": "Jira",
+      "Spend": "4580",
+      "Active Users": "120",
+      "Inative Users": "4"
+    },
+    {
+      "Date": "1/4/23",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1025",
+      "Active Users": "120",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "1/12/23",
+      "Category": "Video Chamada",
+      "Application": "Zoom",
+      "Spend": "3560",
+      "Active Users": "99",
+      "Inative Users": "3"
+    },
+    {
+      "Date": "1/4/23",
+      "Category": "BI",
+      "Application": "Power BI",
+      "Spend": "489",
+      "Active Users": "5",
+      "Inative Users": "3"
+    },
+    {
+      "Date": "2/1/2023",
+      "Category": "Produtividade",
+      "Application": "Microsoft office 365",
+      "Spend": "5689",
+      "Active Users": "106",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "2/15/2023",
+      "Category": "Produtividade",
+      "Application": "Jira",
+      "Spend": "4580",
+      "Active Users": "126",
+      "Inative Users": "4"
+    },
+    {
+      "Date": "2/4/2023",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1025",
+      "Active Users": "126",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "2/12/2023",
+      "Category": "Video Chamada",
+      "Application": "Zoom",
+      "Spend": "3560",
+      "Active Users": "105",
+      "Inative Users": "3"
+    },
+    {
+      "Date": "2/4/2023",
+      "Category": "BI",
+      "Application": "Power BI",
+      "Spend": "489",
+      "Active Users": "11",
+      "Inative Users": "3"
+    },
+    {
+      "Date": "3/4/2023",
+      "Category": "Produtividade",
+      "Application": "Microsoft office 365",
+      "Spend": "5689",
+      "Active Users": "112",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "3/18/2023",
+      "Category": "Produtividade",
+      "Application": "Jira",
+      "Spend": "4580",
+      "Active Users": "132",
+      "Inative Users": "4"
+    },
+    {
+      "Date": "3/7/2023",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1025",
+      "Active Users": "132",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "3/15/2023",
+      "Category": "Video Chamada",
+      "Application": "Zoom",
+      "Spend": "3560",
+      "Active Users": "111",
+      "Inative Users": "3"
+    },
+    {
+      "Date": "3/7/2023",
+      "Category": "BI",
+      "Application": "Power BI",
+      "Spend": "489",
+      "Active Users": "17",
+      "Inative Users": "3"
+    },
+    {
+      "Date": "4/4/2023",
+      "Category": "Produtividade",
+      "Application": "Microsoft office 365",
+      "Spend": "5689",
+      "Active Users": "118",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "4/18/2023",
+      "Category": "Produtividade",
+      "Application": "Jira",
+      "Spend": "4580",
+      "Active Users": "138",
+      "Inative Users": "4"
+    },
+    {
+      "Date": "4/7/2023",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1025",
+      "Active Users": "138",
+      "Inative Users": "8"
+    },
+    {
+      "Date": "4/15/2023",
+      "Category": "Video Chamada",
+      "Application": "Zoom",
+      "Spend": "3560",
+      "Active Users": "117",
+      "Inative Users": "3"
+    },
+    {
+      "Date": "4/7/2023",
+      "Category": "BI",
+      "Application": "Power BI",
+      "Spend": "489",
+      "Active Users": "23",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "5/5/2023",
+      "Category": "Produtividade",
+      "Application": "Microsoft office 365",
+      "Spend": "5689",
+      "Active Users": "124",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "5/19/2023",
+      "Category": "Produtividade",
+      "Application": "Jira",
+      "Spend": "4580",
+      "Active Users": "144",
+      "Inative Users": "7"
+    },
+    {
+      "Date": "5/8/2023",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1025",
+      "Active Users": "144",
+      "Inative Users": "8"
+    },
+    {
+      "Date": "5/16/2023",
+      "Category": "Video Chamada",
+      "Application": "Zoom",
+      "Spend": "3560",
+      "Active Users": "123",
+      "Inative Users": "3"
+    },
+    {
+      "Date": "5/8/2023",
+      "Category": "BI",
+      "Application": "Power BI",
+      "Spend": "489",
+      "Active Users": "29",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "6/5/2023",
+      "Category": "Produtividade",
+      "Application": "Microsoft office 365",
+      "Spend": "5689",
+      "Active Users": "130",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "6/19/2023",
+      "Category": "Produtividade",
+      "Application": "Jira",
+      "Spend": "4580",
+      "Active Users": "150",
+      "Inative Users": "7"
+    },
+    {
+      "Date": "6/8/2023",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1025",
+      "Active Users": "150",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "6/16/2023",
+      "Category": "Video Chamada",
+      "Application": "Zoom",
+      "Spend": "3560",
+      "Active Users": "129",
+      "Inative Users": "3"
+    },
+    {
+      "Date": "6/8/2023",
+      "Category": "BI",
+      "Application": "Power BI",
+      "Spend": "489",
+      "Active Users": "35",
+      "Inative Users": "6"
+    },
+    {
+      "Date": "7/6/2023",
+      "Category": "Produtividade",
+      "Application": "Microsoft office 365",
+      "Spend": "5689",
+      "Active Users": "136",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "7/20/2023",
+      "Category": "Produtividade",
+      "Application": "Jira",
+      "Spend": "4580",
+      "Active Users": "156",
+      "Inative Users": "7"
+    },
+    {
+      "Date": "7/9/2023",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1025",
+      "Active Users": "156",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "7/17/2023",
+      "Category": "Video Chamada",
+      "Application": "Zoom",
+      "Spend": "3560",
+      "Active Users": "135",
+      "Inative Users": "8"
+    },
+    {
+      "Date": "7/9/2023",
+      "Category": "BI",
+      "Application": "Power BI",
+      "Spend": "489",
+      "Active Users": "41",
+      "Inative Users": "6"
+    },
+    {
+      "Date": "8/6/2023",
+      "Category": "Produtividade",
+      "Application": "Microsoft office 365",
+      "Spend": "5689",
+      "Active Users": "142",
+      "Inative Users": "6"
+    },
+    {
+      "Date": "8/20/2023",
+      "Category": "Produtividade",
+      "Application": "Jira",
+      "Spend": "4580",
+      "Active Users": "162",
+      "Inative Users": "7"
+    },
+    {
+      "Date": "8/9/2023",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1025",
+      "Active Users": "162",
+      "Inative Users": "5"
+    },
+    {
+      "Date": "8/17/2023",
+      "Category": "Video Chamada",
+      "Application": "Zoom",
+      "Spend": "3560",
+      "Active Users": "141",
+      "Inative Users": "9"
+    },
+    {
+      "Date": "8/9/2023",
+      "Category": "BI",
+      "Application": "Power BI",
+      "Spend": "489",
+      "Active Users": "47",
+      "Inative Users": "7"
+    },
+    {
+      "Date": "9/6/2023",
+      "Category": "Produtividade",
+      "Application": "Microsoft office 365",
+      "Spend": "5689",
+      "Active Users": "148",
+      "Inative Users": "7"
+    },
+    {
+      "Date": "9/20/2023",
+      "Category": "Produtividade",
+      "Application": "Jira",
+      "Spend": "4580",
+      "Active Users": "168",
+      "Inative Users": "7"
+    },
+    {
+      "Date": "9/9/2023",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1025",
+      "Active Users": "168",
+      "Inative Users": "5"
+    }
+  ]

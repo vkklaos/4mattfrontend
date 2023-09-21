@@ -1,5 +1,5 @@
 import { MantineProvider, createTheme } from '@mantine/core';
-import { Shell } from './Views/Shell/Shell';
+import { ShellApp } from './Views/ShellApp/ShellApp';
 import { Storage } from './Context';
 
 const theme = createTheme({
@@ -43,11 +43,10 @@ const App = () => {
   return (
     <MantineProvider
       theme={theme}
-      withGlobalStyles
-      withNormalizeCSS
+      forceColorScheme='light'
     >
       <Storage>
-        <Shell />
+        <ShellApp />
       </Storage>
     </MantineProvider>
   );

@@ -129,8 +129,12 @@ export const Storage = ({ children }) => {
           }
         }
       }
+      if (dateFilter[0] === null) {
+        const result = doDefault();
+        setDateFilter([result.minDate, result.maxDate])
+      }
     }
-  }, [items, categoryFilter, dateFilter, appFilter])
+  }, [items, categoryFilter, dateFilter, appFilter, doDefault])
 
   // callbacks to get processed data
 

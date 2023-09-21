@@ -29,7 +29,7 @@ const AppInfoSpend = () => {
         {maxSpend && maxSpend.application !== null ?
             <Group wrap="nowrap" className={classes.container}>
                 <Image
-                    src={`pngs/${imageName}.png`}
+                    src={`assets/pngs/${imageName}.png`}
                     style={{
                         maxWidth: '80%'
                     }}

@@ -11,12 +11,25 @@ const AppInfoSpend = () => {
         style: 'currency',
         currency: 'USD',
     });
+
+    const [imageName, setImageName] = React.useState('');
+    
+
+    React.useEffect(() => {
+        if (maxSpend) {
+            if (maxSpend.application) {
+                const name = maxSpend.application.replace(/\W+/g, '').toLowerCase();
+                setImageName(name);
+            }
+        }
+    }, [maxSpend])
+
   return (
     <div>
         {maxSpend && maxSpend.application !== null ?
             <Group wrap="nowrap" className={classes.container}>
                 <Image
-                    src={`pngs/${maxSpend.application}.png`}
+                    src={`pngs/${imageName}.png`}
                     style={{
                         maxWidth: '80%'
                     }}

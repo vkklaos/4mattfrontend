@@ -47,8 +47,8 @@ export function ShellApp() {
       >
         <AppShell.Header withBorder={false}>
         <Group h="100%" px="md">
-          <Burger opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
-          <Burger opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
+          <Burger color='main' opened={desktopOpened} onClick={toggleDesktop} visibleFrom="sm" size="sm" />
+          <Burger color='main' opened={mobileOpened} onClick={toggleMobile} hiddenFrom="sm" size="sm" />
           <Group justify="start" style={{ flex: 1 }}>
             <Group ml="xl" gap={40} visibleFrom="sm" className={classes.headerGroup} >
               {links}

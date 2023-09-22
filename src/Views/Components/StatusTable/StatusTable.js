@@ -21,10 +21,10 @@ const StatusTable = () => {
             </Table.Td>
             <Table.Td>
             <Group justify="space-between">
-                <Text fz="xs" c="#32A636" fw={700}>
+                <Text fz="xs" c="#6032A6" fw={700}>
                 {row.actives}
                 </Text>
-                <Text fz="xs" c="#A63232" fw={700}>
+                <Text fz="xs" c="#ABADB2" fw={700}>
                 {row.inactives}
                 </Text>
             </Group>
@@ -32,13 +32,13 @@ const StatusTable = () => {
                 <Progress.Section
                 className={classes.progressSection}
                 value={percentageActives}
-                color="#32A636"
+                color="#6032A6"
                 />
 
                 <Progress.Section
                 className={classes.progressSection}
                 value={percentageInactives}
-                color="#A63232"
+                color="#ABADB2"
                 />
             </Progress.Root>
             </Table.Td>
@@ -52,7 +52,7 @@ const StatusTable = () => {
             datasets: [
               {
                 data: [30, 40],
-                backgroundColor: ['red', 'blue', 'green'],
+                backgroundColor: ['blue', 'purple'],
               },
             ],
           }
@@ -70,7 +70,7 @@ const StatusTable = () => {
                 datasets: [
                   {
                     data: [totalPercentageActives, totalPercentageInactives],
-                    backgroundColor: ['#32A636', '#A63232'],
+                    backgroundColor: ['#6032A6', '#ABADB2'],
                   },
                 ],
               }

@@ -29,7 +29,7 @@ export const Storage = ({ children }) => {
   const [maxSpend, setMaxSpend] = React.useState(null);
 
   const doDefault = React.useCallback(() => {
-    let items = data.map((item) => {
+    let result = data.map((item) => {
       let itemObject = new DataItem(
         item.Date,
         item.Category,
@@ -38,13 +38,14 @@ export const Storage = ({ children }) => {
         item["Active Users"],
         item["Inative Users"]
       );
+      console.log(itemObject);
       return itemObject;
     });
-    var orderedDates = items.sort(function(a, b) {
+    var orderedDates = result.sort(function(a, b) {
       return Date.parse(a) - Date.parse(b);
     });
     return {
-      items: items,
+      items: result,
       minDate: orderedDates[0].date,
       maxDate: orderedDates[orderedDates.length - 1].date
     }

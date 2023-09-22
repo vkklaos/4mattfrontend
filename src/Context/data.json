@@ -283,7 +283,7 @@
       "Date": "8/6/2023",
       "Category": "Produtividade",
       "Application": "Microsoft office 365",
-      "Spend": "5689",
+      "Spend": "6089",
       "Active Users": "142",
       "Inative Users": "6"
     },
@@ -299,7 +299,7 @@
       "Date": "8/9/2023",
       "Category": "RH",
       "Application": "Solides",
-      "Spend": "1025",
+      "Spend": "1095",
       "Active Users": "162",
       "Inative Users": "5"
     },
@@ -323,9 +323,17 @@
       "Date": "9/6/2023",
       "Category": "Produtividade",
       "Application": "Microsoft office 365",
-      "Spend": "5689",
+      "Spend": "6089",
       "Active Users": "148",
       "Inative Users": "7"
+    },
+    {
+      "Date": "9/9/2023",
+      "Category": "RH",
+      "Application": "Solides",
+      "Spend": "1095",
+      "Active Users": "168",
+      "Inative Users": "5"
     },
     {
       "Date": "9/20/2023",
@@ -334,13 +342,5 @@
       "Spend": "4580",
       "Active Users": "168",
       "Inative Users": "7"
-    },
-    {
-      "Date": "9/9/2023",
-      "Category": "RH",
-      "Application": "Solides",
-      "Spend": "1025",
-      "Active Users": "168",
-      "Inative Users": "5"
     }
   ]

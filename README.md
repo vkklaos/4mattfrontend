@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+Demo: https://4mattfrontend.vercel.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Como executar a aplicação
+1. Baixe e instale o NPM https://nodejs.org/en/download
+2. Clone o repositório: https://github.com/vkklaos/4mattfrontend
+3. Abra o console na pasta do projeto
+4. Execute: ‘npm install’
+5. Execute: ‘npm start’
+6. Pronto! D
 
-In the project directory, you can run:
 
-### `npm start`
+Considerações
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Meus testes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Após alguns testes em outros monitores, percebi que a saturação está muito
+alta, gerando uma diferença de cores entre telas oiled e amoled.
+- A base de dados não tinha dados suficientes para criação do ‘Application spend
+increase’, fiz um ajuste nos valores do mês de agosto na base de dados para
+termos conteúdo que demonstrasse essa funcionalidade.
+- Filtro de data e aplicação: OK
+- Filtro de data e categoria: OK
+- Filtro de categoria e aplicação não podem ser utilizados juntos, diminuindo a
+chance de erro no código e gerando mais usabilidade com limitação dos
+campos.
+- Também por causa do problema de saturação, é capaz que o contraste não
+esteja funcionando da maneira correta para alguém que tenha algum tipo de
+daltonismo (ponto a melhorar).
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+UI/UX
 
-### `npm run build`
+Objetivos:
+- O usuário deve permanecer no site durante horas sem desconforto visual;
+- O usuário deve conseguir aplicar filtros sem qualquer esforço;
+- O usuário deve conseguir obter os resultados necessários de forma visual;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Decisões:
+- Natureza de cor: Fria: Trabalhando com cores frias na natureza da cor da logo
+(azul - púrpura) vai permitir que o usuário encontre fácil as ações dentro da
+aplicação e dar uma sensação de transparência e assertividade.
+- Natureza do site: Grade: Trabalhando com design em grade nós permitimos
+que o usuário tenha uma experiência familiar gerando mais conhecimento sobre
+a ‘cultura da aplicação’, trazendo um sentimento de estabilidade.
+- Formas: Levemente arredondadas 2.5 Como a aplicação tem como objetivo
+fazer o usuário permanecer online durante algumas horas sem incômodos
+visuais, as formas levemente arredondadas vão dar uma sensação de
+sobriedade e familiaridade com a interface levando o layout em consideração.
+- Sombras: Eixo Y com pouco desfoque: Usando a sombra somente no eixo Y
+com pouco desfoque e seguindo a natureza da cor da aplicação, damos ao
+usuário o sentimento de profissionalismo, pois a sombra indica que a luz vem
+de cima deixando as coisas naturais ‘como ao meio dia’ e dando a sensação de
+que o aplicativo é algo rotineiro.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Frontend
 
-### `npm run eject`
+index.js:
+- Renderiza o cliente DOM via ID #root e retorna o componente ‘App.js’.
+App.js:
+- Cria o tema com as predefinições de padronização, seta o contexto da
+aplicação e renderiza o componente ‘ShellApp.js’;
+Estruturação:
+- Assets: Pasta onde ficam os recursos visuais (pngs e svgs);
+- Classes: Pasta onde fica a classe que organiza e trata os dados da base;
+- Context: Pasta onde fica a base em .json e o nosso contexto da aplicação;
+- Views: Pasta onde fica tudo que será imprimido na tela;
+- Views/ShellApp: Estrutura base da aplicação, onde engloba o cabeçalho,
+navegação e layout principal;
+- Views/HelloWorldPage: Página com ‘hello world’ centralizado;
+- Views/Dashboard: Página inicial onde está a grade e é feita a
+componentização;
+- Views/Components: Pasta com os componentes que serão renderizados de
+forma dinâmica;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+DevOps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+CRA - NPM v8.19.2 - Node v18.12.1
+Pacotes e versões:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- react: 18.2.0
+- react-dom: 18.2.0
+- react-router-dom: 6.16.0
+- react-scripts: 5.0.1
+- @mantine/core: 7.0.0
+- @mantine/dates: 7.0.0
+- @mantine/hooks: 7.0.0
+- chart.js: 4.4.0
+- react-chartjs-2 5.2.0
+- dayjs: 1.11.10
